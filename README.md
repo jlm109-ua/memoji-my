@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Memoji.my
 
-First, run the development server:
+## Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Memoji.my is a fun and interactive memory game developed with Next.js and React. The game uses dynamically generated avatars through the Dicebear API to create a unique experience in every match.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Main Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Dynamic Avatar Generation**: Uses the Dicebear API to create unique avatars in every game.
+- **Multiple Avatar Styles**: Players can choose from a wide variety of avatar styles.
+- **Responsive Interface**: Designed to work on both mobile and desktop devices.
+- **Dark/Light Mode**: Supports theme switching for a personalized user experience.
+- **Smooth Animations**: Transitions and animations for a seamless gaming experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript for more robust development.
+- **Tailwind CSS**: Utility-first CSS framework for fast and customizable styling.
+- **Dicebear API**: Service to generate unique avatars.
 
-To learn more about Next.js, take a look at the following resources:
+## How to Play
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Select an avatar style from the dropdown menu.
+2. Click on the cards to reveal the hidden avatars.
+3. Find all pairs of matching avatars.
+4. Win the game once all pairs are found!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation and Local Setup
 
-## Deploy on Vercel
+To run this project locally, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/memoji-game.git
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Navigate to the project directory:
+   ```bash
+   cd memoji-game
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit `http://localhost:3000`
+
+## Project Structure
+
+- `/pages`: Contains the Next.js application routes.
+- `/components`: Reusable React components.
+- `/styles`: Global CSS files and Tailwind configuration.
+- `/public`: Static assets like images and favicon.
+
+If you have any questions or suggestions, feel free to open an issue in this repository.
+
+---
+
+Enjoy playing Memoji!
