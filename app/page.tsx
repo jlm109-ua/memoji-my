@@ -97,6 +97,8 @@ export default function DicebearMemory() {
                   <Image
                     src={`https://api.dicebear.com/9.x/${s}/svg?seed=${styleSeeds.current[index]}`}
                     alt={`${s} style`}
+                    width={24}
+                    height={24}
                     className="w-6 h-6 mr-2 object-contain"
                   />
                   <span>{s.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
@@ -111,8 +113,8 @@ export default function DicebearMemory() {
           <Card
             key={card.id}
             className={`w-24 h-24 flex items-center justify-center cursor-pointer transition-all duration-300 text-black dark:text-black overflow-hidden ${flipped.includes(card.id) || solved.includes(card.id)
-              ? 'bg-gray-100 dark:bg-transparent shadow-none'
-              : `bg-secondary dark:bg-secondary`
+                ? 'bg-gray-100 dark:bg-transparent shadow-none'
+                : `bg-secondary dark:bg-secondary`
               }`}
             onClick={() => !disabled && !solved.includes(card.id) && !flipped.includes(card.id) && handleClick(card.id)}
           >
@@ -121,6 +123,8 @@ export default function DicebearMemory() {
                 <Image
                   src={`https://api.dicebear.com/9.x/${style}/svg?seed=${card.seed}`}
                   alt="Dicebear Avatar"
+                  width={96}
+                  height={96}
                   className="max-w-full max-h-full object-contain"
                 />
               </div>

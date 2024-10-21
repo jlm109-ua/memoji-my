@@ -10,7 +10,13 @@ interface SelectContextType {
 
 const SelectContext = createContext<SelectContextType | undefined>(undefined)
 
-export const Select = ({ children, onValueChange, defaultValue = '' }: { children: React.ReactNode, onValueChange: (value: string) => void, defaultValue?: string }) => {
+interface SelectProps {
+    children: React.ReactNode
+    onValueChange: (value: string) => void
+    defaultValue?: string
+}
+
+export const Select: React.FC<SelectProps> = ({ children, onValueChange, defaultValue = '' }) => {
     const [value, setValue] = useState(defaultValue)
     const [open, setOpen] = useState(false)
 
@@ -29,7 +35,12 @@ export const Select = ({ children, onValueChange, defaultValue = '' }: { childre
     )
 }
 
-export const SelectTrigger = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => {
+interface SelectTriggerProps {
+    children: React.ReactNode
+    className?: string
+}
+
+export const SelectTrigger: React.FC<SelectTriggerProps> = ({ children, className = '' }) => {
     const context = useContext(SelectContext)
     if (!context) throw new Error('SelectTrigger must be used within a Select')
 
@@ -47,14 +58,22 @@ export const SelectTrigger = ({ children, className = '' }: { children: React.Re
     )
 }
 
-export const SelectValue = ({ placeholder }: { placeholder: string }) => {
+interface SelectValueProps {
+    placeholder: string
+}
+
+export const SelectValue: React.FC<SelectValueProps> = ({ placeholder }) => {
     const context = useContext(SelectContext)
     if (!context) throw new Error('SelectValue must be used within a Select')
 
     return <span>{context.value || placeholder}</span>
 }
 
-export const SelectContent = ({ children }: { children: React.ReactNode }) => {
+interface SelectContentProps {
+    children: React.ReactNode
+}
+
+export const SelectContent: React.FC<SelectContentProps> = ({ children }) => {
     const context = useContext(SelectContext)
     if (!context) throw new Error('SelectContent must be used within a Select')
 
@@ -69,7 +88,12 @@ export const SelectContent = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export const SelectItem = ({ children, value }: { children: React.ReactNode, value: string }) => {
+interface SelectItemProps {
+    children: React.ReactNode
+    value: string
+}
+
+export const SelectItem: React.FC<SelectItemProps> = ({ children, value }) => {
     const context = useContext(SelectContext)
     if (!context) throw new Error('SelectItem must be used within a Select')
 
