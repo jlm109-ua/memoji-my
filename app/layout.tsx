@@ -6,8 +6,8 @@ import Link from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
 
 export const metadata: Metadata = {
-  title: "Memoji.my",
-  description: "Memoji made by Jimy!",
+  title: "Memoji-my",
+  description: "Memory game made by Jimy!",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen">
             <header className="container mx-auto p-4 flex justify-between items-center">
-              <h1 className="text-2xl font-bold">memoji.my</h1>
+              <h1 className="text-2xl font-bold">memoji-my</h1>
               <div className="flex items-center space-x-4">
                 <Link href="https://github.com/jlm109-ua/hangman" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
                   <IoLogoGithub size={24} />
