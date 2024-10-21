@@ -1,9 +1,9 @@
 
-# Memoji.my
+# Memoji-my
 
 ## Project Description
 
-Memoji.my is a fun and interactive memory game developed with Next.js and React. The game uses dynamically generated avatars through the Dicebear API to create a unique experience in every match.
+Memoji-my is a fun and interactive memory game developed with Next.js and React. The game uses dynamically generated avatars through the Dicebear API to create a unique experience in every match.
 
 ## Main Features
 
@@ -65,4 +65,4 @@ If you have any questions or suggestions, feel free to open an issue in this rep
 
 ---
 
-Enjoy playing Memoji!
+Enjoy playing Memoji-my!
