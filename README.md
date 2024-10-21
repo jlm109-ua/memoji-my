@@ -60,7 +60,7 @@ To run this project locally, follow these steps:
 - `/components`: Reusable React components.
 - `/styles`: Global CSS files and Tailwind configuration.
 - `/public`: Static assets like images and favicon.
-- 
+
 If you have any questions or suggestions, feel free to open an issue in this repository.
 
 ---
