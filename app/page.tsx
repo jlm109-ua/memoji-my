@@ -84,7 +84,7 @@ export default function DicebearMemory() {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4">
+    <div className="flex flex-col items-center p-4">
       <div className="mb-4">
         <Select onValueChange={setStyle} defaultValue={style}>
           <SelectTrigger className="w-56 bg-background text-foreground text-black dark:text-black">
@@ -113,8 +113,8 @@ export default function DicebearMemory() {
           <Card
             key={card.id}
             className={`w-24 h-24 flex items-center justify-center cursor-pointer transition-all duration-300 text-black dark:text-black overflow-hidden ${flipped.includes(card.id) || solved.includes(card.id)
-                ? 'bg-gray-100 dark:bg-transparent shadow-none'
-                : `bg-secondary dark:bg-secondary`
+              ? 'bg-gray-100 dark:bg-transparent shadow-none'
+              : `bg-secondary dark:bg-secondary`
               }`}
             onClick={() => !disabled && !solved.includes(card.id) && !flipped.includes(card.id) && handleClick(card.id)}
           >
