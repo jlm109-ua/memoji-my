@@ -25,7 +25,7 @@ export default function RootLayout({
             <header className="container mx-auto p-4 flex justify-between items-center">
               <h1 className="text-2xl font-bold">memoji-my</h1>
               <div className="flex items-center space-x-4">
-                <Link href="https://github.com/jlm109-ua/hangman" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+                <Link href="https://github.com/jlm109-ua/memoji-my" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
                   <IoLogoGithub size={24} />
                 </Link>
                 <ThemeToggle />
