@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { ThemeProvider } from "../components/ui/theme-provider";
+import { ThemeToggle } from "../components/ui/theme-toggle";
 import Link from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
 

@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect, useRef } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Button } from "../components/ui/button"
+import { Card } from "../components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
 import Image from 'next/image'
 
 const dicebearStyles = [
@@ -87,7 +87,7 @@ export default function DicebearMemory() {
     <div className="flex flex-col items-center p-4">
       <div className="mb-4">
         <Select onValueChange={setStyle} defaultValue={style}>
-          <SelectTrigger className="w-56 bg-background text-foreground text-black dark:text-black">
+          <SelectTrigger className="w-full sm:w-56 bg-background text-foreground text-black dark:text-black">
             <SelectValue placeholder="Select a style" />
           </SelectTrigger>
           <SelectContent>
@@ -99,7 +99,7 @@ export default function DicebearMemory() {
                     alt={`${s} style`}
                     width={24}
                     height={24}
-                    className="w-6 h-6 mr-2 object-contain"
+                    className="w-6 h-6 mob mr-2 object-contain"
                   />
                   <span>{s.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
                 </div>
@@ -108,11 +108,11 @@ export default function DicebearMemory() {
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-4 gap-2 mt-4">
         {cards.map((card) => (
           <Card
             key={card.id}
-            className={`w-24 h-24 flex items-center justify-center cursor-pointer transition-all duration-300 text-black dark:text-black overflow-hidden ${flipped.includes(card.id) || solved.includes(card.id)
+            className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center cursor-pointer transition-all duration-300 text-black dark:text-black overflow-hidden ${flipped.includes(card.id) || solved.includes(card.id)
               ? 'bg-gray-100 dark:bg-transparent shadow-none'
               : `bg-secondary dark:bg-secondary`
               }`}
